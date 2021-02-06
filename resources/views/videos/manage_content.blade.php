@@ -3,7 +3,7 @@
 
 </head>
 <video  width="720" height="540" controls preload="auto">
-    @if(isset($video[0]))
+    @if(isset($video[0]->videoname))
     <source src="{{asset('videos/' . $video[0]->videoname)}}">
         @endif
 </video>
@@ -28,6 +28,6 @@
 <form method="post" action="/video/delete" >
     {{csrf_field()}}
     <input type="hidden" name="chapter_id" value="{{$chapter_id}}">
-    <button style="float: right;color: red" type="submit">Kapitel löschen</button>
+    <button style="margin-bottom: 20px;float: right;color: red" type="submit">Kapitel löschen</button>
 
 </form>

@@ -45,7 +45,8 @@ console.log(123);
     });
 
 
-    $("#manage_content").click(function (e) {
+    $(document).on('click', '#manage_content', function(e) {
+
 
         var chapter_id = $(this).data('chapter_id');
         $.ajaxSetup({
@@ -58,6 +59,7 @@ console.log(123);
             chapter_id: chapter_id,
         };
         var ajaxurl = '/chapter/manage';
+        console.log(ajaxurl);
         $.ajax({
             type: 'POST',
             url: ajaxurl,

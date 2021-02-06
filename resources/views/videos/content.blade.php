@@ -1,6 +1,5 @@
 <head>
 
-    <script src="{{ asset('js/video.js') }}" ></script>
     <link rel="stylesheet" type="text/css" href="{{ url('/css/form.css') }}" />
 
 </head>
