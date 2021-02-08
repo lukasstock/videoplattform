@@ -37,10 +37,7 @@ Route::group([
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/videos/index', function () {
-    $videos = new \App\Http\Controllers\VideoController();
-    return $videos->show();
-});
+
 
 Route::post('/lessons/create', function () {
     return view('lessons/create');

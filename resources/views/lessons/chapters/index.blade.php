@@ -23,7 +23,7 @@
     <input type="hidden" name="lesson_id" value="{{$lessons['lesson_id']  ?? $lessons[0]->id}}">
     @foreach($chapters as $key => $chapter)
         <input type="hidden" name="chapter_name" value="{{$chapter->chapter_name}}">
-        <a data-lesson_id="{{$lessons[0]->id ?? ''}}" data-chapter_id="{{$chapter->id}}" class="btn-show">{{$key+1 . '. ' . $chapter->chapter_name}}</a>
+        <a data-lesson_id="{{$lessons[0]->id ?? $lessons['user_id']}}" data-chapter_id="{{$chapter->id}}" class="btn-show">{{$key+1 . '. ' . $chapter->chapter_name}}</a>
     @endforeach
     @if(is_object(auth()->user()) && (isset($lessons[0]) && $lessons[0]->user_id == auth()->user()->id || isset($lessons['user_id']) && $lessons['user_id'] == auth()->user()->id) || (is_object(auth()->user()) && auth()->user()->is_admin))
     <button style="margin-left: 8px" class="button" type="submit">Neues Kapitel erstellen</button>
