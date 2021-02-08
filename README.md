@@ -12,8 +12,8 @@
 
 Zum Starten des Projekts zuerst composer.json ausführen danach mit dem Terminal in das Projektverzeichnis navigieren und folgende Befehle ausführen:
 
-- ggf .env Datei anpassen auf lokale Datenbankeinstellungen
-- "php artisan mysql:createdb videoplattform" ausführen ( Erstellt Datenbank )
+- "php artisan mysql:createdb videoplattform" ausführen ( DB_DATABASE in der .env Datei MUSS leer sein! )
+-  DB_DATABASE in der .env Datei ergänzen ( DB_DATABASE=videoplattform )
 - "php artisan migrate" (Erstellt Tabellen)
 - "php artisan serve"   (Server starten)
 
