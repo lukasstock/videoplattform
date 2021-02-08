@@ -12,8 +12,8 @@
 
 Zum Starten des Projekts zuerst composer.json ausführen danach mit dem Terminal in das Projektverzeichnis navigieren und folgende Befehle ausführen:
 
-- php artisan mysql:createdb videoplattform ausführen ( Erstellt Datenbank )
-- php artisan migrate (Erstellt Tabellen)
-- php artisan serve   (Server starten)
+- "php artisan mysql:createdb videoplattform" ausführen ( Erstellt Datenbank )
+- "php artisan migrate" (Erstellt Tabellen)
+- "php artisan serve"   (Server starten)
 
 Hiernach 127.0.0.1:8000 im Browser aufrufen
