@@ -8,7 +8,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## Info
 
 Zum Starten des Projekts zuerst composer.json ausführen danach mit dem Terminal in das Projektverzeichnis navigieren und folgende Befehle ausführen:
 
