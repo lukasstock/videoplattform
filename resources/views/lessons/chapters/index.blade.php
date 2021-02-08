@@ -19,15 +19,14 @@
 
 <form method="post" action="/chapters/create">
    {{csrf_field()}}
-
     <input type="hidden" name="lesson_name" value="{{$lessons['lesson_name'] ?? $lessons[0]->lesson_name}}">
     <input type="hidden" name="lesson_id" value="{{$lessons['lesson_id']  ?? $lessons[0]->id}}">
     @foreach($chapters as $key => $chapter)
         <input type="hidden" name="chapter_name" value="{{$chapter->chapter_name}}">
-        <a data-lesson_id="{{$lessons['lesson_id'] ?? ''}}" data-chapter_id="{{$chapter->id}}" class="btn-show">{{$key+1 . '. ' . $chapter->chapter_name}}</a>
+        <a data-lesson_id="{{$lessons[0]->id ?? ''}}" data-chapter_id="{{$chapter->id}}" class="btn-show">{{$key+1 . '. ' . $chapter->chapter_name}}</a>
     @endforeach
     @if(is_object(auth()->user()) && (isset($lessons[0]) && $lessons[0]->user_id == auth()->user()->id || isset($lessons['user_id']) && $lessons['user_id'] == auth()->user()->id) || (is_object(auth()->user()) && auth()->user()->is_admin))
-    <button type="submit">Neues Kapitel erstellen</button>
+    <button style="margin-left: 8px" class="button" type="submit">Neues Kapitel erstellen</button>
     @endif
 </form>
 </div>
@@ -60,10 +59,6 @@
 
 <style>
 
-    body {
-        background: #5a6268;
-        font-family: "Lato", sans-serif;
-    }
 
     .content{
         margin-left: 30%;

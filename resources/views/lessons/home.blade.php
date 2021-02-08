@@ -31,12 +31,6 @@
         cursor: pointer;
     }
 
-    body {
-        font-family: "Lato", sans-serif;
-        background: black;
-        color: white;
-    }
-
     .circle{
         counter-reset: list-counter;
         list-style: none;

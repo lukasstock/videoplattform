@@ -27,6 +27,9 @@ class LessonsController extends Controller
 
     public function save(Request $request)
     {
+        if (!$request->input('title')){
+            return view('welcome', ['message' => 'Bitte Titel angeben']);
+        }
 
         $category = $request->input('category');
         $title = $request->input('title');

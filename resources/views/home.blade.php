@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                 Sie sind eingeloggt! Über den Button oben links gelangen Sie zur Homepage.
                 </div>
             </div>
         </div>

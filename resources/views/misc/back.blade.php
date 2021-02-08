@@ -1,4 +1,8 @@
-<button onclick="goBack()" style="float: right; width: 70px; height: 30px;">Zurück</button>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/form.css') }}" />
+</head>
+
+<button class="button" onclick="goBack()" style="float: right;">Zurück</button>
 <script>
     function goBack() {
         window.history.back();

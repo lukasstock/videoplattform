@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/form.css') }}" />
 
         <title>Laravel</title>
 
@@ -12,7 +13,6 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: black;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -96,14 +96,14 @@
                 <div class="links">
                  <form method="post" action="/lessons/create">
                      {{csrf_field()}}
-                     <button name="" type="submit"> Neue Lektion erstellen</button>
+                     <button class="button" name="" type="submit"> Neue Lektion erstellen</button>
                  </form>
                 </div>
                 @endif
 
                 <form method="get" action="/lessons/index">
                         {{csrf_field()}}
-                        <button name="" type="submit"> Alle Lektionen ansehen</button>
+                        <button class="button" type="submit"> Alle Lektionen ansehen</button>
                     </form>
 
                 @if(isset($message))

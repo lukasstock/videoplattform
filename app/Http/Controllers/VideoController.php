@@ -35,6 +35,7 @@ class VideoController extends Controller
     public function save(Request $request)
     {
 
+
         if ($_FILES["file"]["type"] == "video/mp4")
 
         {
@@ -50,7 +51,15 @@ class VideoController extends Controller
         }
         else
         {
-            $error = "Dateiformat ungültig. Bitte in .mp4 Format hochladen";
+            if ($_FILES["file"]["name"] === "")
+            {
+                $error = "Kein Video mit angegeben. Restliche Änderungen wurden übernommen!";
+            } else {
+
+                return view('welcome', ['message' => 'Dateiformat ungültig. Bitte in .mp4 Format hochladen! Änderungen wurden nicht übernommen']);
+
+            }
+
         }
 
 

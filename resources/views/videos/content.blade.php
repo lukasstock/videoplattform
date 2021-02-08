@@ -26,8 +26,10 @@
     <p style="width: 720px" id="description">{{$video[0]->description}}</p>
 
 @endif
-@if((isset($chapter[0]) && (is_object(auth()->user()) && $chapter[0]->user_id == auth()->user()->id)) || (is_object(auth()->user()) && auth()->user()->is_admin) )
-    <button type="submit" data-chapter_id="{{$chapter_id}}" id="manage_content">Inhalt verwalten</button>
+@if((isset($chapter[0]) && (is_object(auth()->user()) && $chapter[0]->user_id == auth()->user()->id)) ||
+    (is_object(auth()->user()) && auth()->user()->is_admin) ||
+    (isset($video[0]) && (is_object(auth()->user()) && $video[0]->user_id == auth()->user()->id)))
+    <button class="button" type="submit" data-chapter_id="{{$chapter_id}}" id="manage_content">Inhalt verwalten</button>
 @endif
 <script type="text/javascript">
 

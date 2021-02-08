@@ -8,7 +8,7 @@
         @endif
 </video>
 <form method="post" action="/video/save" enctype="multipart/form-data">
-    <label for="file"><span>Videoname:</span></label>
+    <label for="file"><span>(Maximal 10 MB!)Videoname:</span></label>
     <input type="file" name="file" id="file" />
     <p>***Bearbeitungsmodus***</p>
     <label for="title">Titel:</label>
@@ -17,7 +17,7 @@
     <input type="text" name="description" id="description" value="{{$video[0]->description ?? ''}}"><br>
     <input type="hidden" name="chapter_id" value="{{$chapter_id ?? ''}}">
     {{csrf_field()}}
-    <button type="submit">Änderungen speichern</button>
+    <button class="button" type="submit">Änderungen speichern</button>
 </form>
 
 
@@ -28,6 +28,6 @@
 <form method="post" action="/video/delete" >
     {{csrf_field()}}
     <input type="hidden" name="chapter_id" value="{{$chapter_id}}">
-    <button style="margin-bottom: 20px;float: right;color: red" type="submit">Kapitel löschen</button>
+    <button class="button" style="color: darkred" type="submit">Kapitel löschen</button>
 
 </form>
